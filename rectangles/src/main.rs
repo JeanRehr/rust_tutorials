@@ -17,7 +17,7 @@ impl Rectangle {
         self.width * self.height
     }
 
-    // needs & to not take ownership and be moved with move semantics
+    // needs & to not take ownership and be moved
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
