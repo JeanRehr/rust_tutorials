@@ -23,10 +23,10 @@ impl Rectangle {
     }
 
     fn square(size: u32) -> Self {
-        Self {
+        return Self {
             width: size,
             height: size,
-        }
+        };
     }
 
     fn rect_builder(width: u32, height: u32) -> Self {
@@ -50,7 +50,7 @@ fn main() {
 
     //let rect2: Rectangle = rect_builder1(10, 10);
 
-    //don't take self as parameter so isn't a method but only an associated fn
+    //don't take self as parameter so isn't a method, so only an associated fn
     //so needs to use this syntax
     let rect2: Rectangle = Rectangle::rect_builder(10, 15);
     println!("the area of tthe rect2 is {} square pixels", rect2.area());
@@ -71,7 +71,11 @@ fn main() {
     dbg!(&rect3);
 
     if rect1.width() {
-        println!("nonzero width of {}", rect1.width);
+        println!("rect1 has a nonzero width of {}", rect1.width);
+    }
+
+    if rect2.height() {
+        println!("rect2 has a nonzero height of {}", rect2.height);
     }
 
     //wihtout & in the function declaration and here, rect2 would be moved
