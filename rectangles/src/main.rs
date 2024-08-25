@@ -81,12 +81,10 @@ fn main() {
     //wihtout & in the function declaration and here, rect2 would be moved
     //into the can_hold function and be taken ownership, println
     //wouldn't work as it needs to borrow it
-    /*
     //println!("can rect1 hold rect2? {}", rect1.can_hold(rect2));
     //println!("can rect1 hold rect3? {}", rect1.can_hold(rect3));
     //println!("the area of tthe rect2 is {} square pixels", rect2.area());
     //println!("the area of tthe rect3 is {} square pixels", rect3.area());
-     */
 
     //borrows (takes a reference) and not ownership
     println!("can rect1 hold rect2? {}", rect1.can_hold(&rect2));
