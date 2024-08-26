@@ -50,8 +50,8 @@ fn main() {
 
     //let rect2: Rectangle = rect_builder1(10, 10);
 
-    //don't take self as parameter so isn't a method, so only an associated fn
-    //so needs to use this syntax
+    //don't take self as parameter so isn't a method, only an associated fn
+    //needs to use this syntax
     let rect2: Rectangle = Rectangle::rect_builder(10, 15);
     println!("the area of tthe rect2 is {} square pixels", rect2.area());
 
